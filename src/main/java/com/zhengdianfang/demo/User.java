@@ -1,5 +1,6 @@
 package com.zhengdianfang.demo;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -14,7 +15,7 @@ public class User {
     public String getUsername() {
         return username;
     }
-
+    @Value("${com.user.username}")
     public User setUsername(String username) {
         this.username = username;
         return this;
@@ -23,7 +24,7 @@ public class User {
     public int getAge() {
         return age;
     }
-
+    @Value("${com.user.age}")
     public User setAge(int age) {
         this.age = age;
         return this;
@@ -32,7 +33,7 @@ public class User {
     public String getAddress() {
         return address;
     }
-
+    @Value("${com.user.address}")
     public User setAddress(String address) {
         this.address = address;
         return this;
